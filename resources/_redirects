@@ -1,0 +1,3 @@
+# Leave the HTTP code as 302, since the redirect is temporary.
+# Leave the `!` at the end - it's a forced redirect, to make sure that none of the files are served.
+/* https://join.slack.com/t/clojurians/shared_invite/zt-3wqiglayp-AeryGi81fgDJIwYdzRV_7Q 302!

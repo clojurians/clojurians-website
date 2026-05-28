@@ -23,8 +23,10 @@
         background: #5d83ca;
         font-size: clamp(1.5rem, 5vw, 2.2rem);
       }
-      button {
+      a.button {
+        display: inline-block;
         padding: 12px 18px;
+        text-decoration: none;
         color: #ffffff;
         background: #63b132;
         border: none;
@@ -33,10 +35,10 @@
         font-weight: 600;
         cursor: pointer;
       }
-      button:hover {
+      a.button:hover {
         background: #529d26;
       }
-      button:focus-visible {
+      a.button:focus-visible {
         outline: 3px solid #255e9b;
         outline-offset: 2px;
       }
@@ -45,7 +47,7 @@
           padding-left: 1.4em;
           width: 100%;
         }
-        button {
+        a.button {
           width: 100%;
         }
       }
@@ -68,9 +70,9 @@
       We're fun, friendly, and helpful. Come join us!
     </p>
     <p>
-      <button onclick="window.location.href='https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/'">
+      <a class="button" href="https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/">
         Join Clojurians Slack
-      </button>
+      </a>
     </p>
     <p>
       We want this to be a friendly and helpful space for everyone and the 
@@ -119,9 +121,9 @@
       and why you're here, in the <strong>#introduce-yourself</strong> channel!
     </p>
     <p>
-      <button onclick="window.location.href='https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/'">
+      <a class="button" href="https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/">
         Join Clojurians Slack
-      </button>
+      </a>
     </p>
   </body>
 </html>

@@ -1,24 +1,27 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Clojurians Slack</title>
     <style>
       body {
         max-width: 600px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 0 20px 20px;
         text-align: center;
         font-family: sans-serif;
+        font-size: clamp(1rem, 2.2vw, 1.15rem);
       }
       ul {
         text-align: left;
         display: inline-block;
       }
       h1 {
-        margin: 0 0 24px;
+        /* pull the banner to full viewport width regardless of body max-width */
+        margin: 0 calc(50% - 50vw) 24px;
         padding: 18px 20px;
         color: #ffffff;
         background: #5d83ca;
-        border-radius: 8px;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
       }
       button {
         padding: 12px 18px;
@@ -26,7 +29,7 @@
         background: #63b132;
         border: none;
         border-radius: 6px;
-        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 1.1rem);
         font-weight: 600;
         cursor: pointer;
       }
@@ -37,15 +40,32 @@
         outline: 3px solid #255e9b;
         outline-offset: 2px;
       }
+      @media (max-width: 600px) {
+        ul {
+          padding-left: 1.4em;
+          width: 100%;
+        }
+        button {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>Clojurians Slack</h1>
     <p>
-      Clojurians Slack is the center of Clojure activity. You have direct 
-      access to project maintainers. You can get your questions answered 
-      quickly from the experts. You'll keep tabs on the latest developments
-      in the community.
+      Clojurians Slack is largest communication hub for the Clojure community.
+      <br>
+      Inside the Slack, you can
+      <ul>
+      <li>get help from experts in the community</li>
+      <li>meet others using Clojure for fun and profit</li>
+      <li>chat directly with project maintainers</li>
+      <li>hear the latest news and developments in the community</li>
+      </ul>
+    </p>
+    <p>
+      We're fun, friendly, and helpful. Come join us!
     </p>
     <p>
       <button onclick="window.location.href='https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/'">
@@ -73,31 +93,35 @@
     <p>
       There are really only two rules:
     </p>
-      <ul>
-        <li>
-          Jobs openings may be posted only in the dedicated channels: 
-          <strong>#jobs</strong> and <strong>#remote-jobs</strong> and 
-          <em>must</em> be Clojure/ClojureScript jobs -- <em>recruiters take note!</em> 
-          You may be able to find candidates in the 
-          <strong>#available-for-jobs</strong> channel (do <em>not</em> post jobs there!).
-        </li>
-        <li>
-          We have a <em>zero</em> tolerance policy for spam and unsolicited 
-          direct messages of a commercial nature (especially about things like 
-          Upwork) -- violators will have their accounts deactivated!
-        </li>
-      </ul>
-      <p>
-        As a reminder, Clojure communities try to follow these guidelines for 
-        general conduct -- 
-        <a href="https://www.clojure.org/community/etiquette">Community Etiquette</a> -- 
-        and this Slack also has a specific
-        <a href="https://github.com/clojurians/community-development/blob/master/Code-of-Conduct.md">Code of Conduct</a>.
-      </p>
-      <p>
-        Once you join, why not say "Hi!" and tell folks a bit about yourself 
-        and why you're here, in the <strong>#introduce-yourself</strong> channel!
-      </p>
+    <ul>
+      <li>
+        Jobs openings may be posted only in the dedicated channels: 
+        <strong>#jobs</strong> and <strong>#remote-jobs</strong> and 
+        <em>must</em> be Clojure/ClojureScript jobs -- <em>recruiters take note!</em> 
+        You may be able to find candidates in the 
+        <strong>#available-for-jobs</strong> channel (do <em>not</em> post jobs there!).
+      </li>
+      <li>
+        We have a <em>zero</em> tolerance policy for spam and unsolicited 
+        direct messages of a commercial nature (especially about things like 
+        Upwork) -- violators will have their accounts deactivated!
+      </li>
+    </ul>
+    <p>
+      As a reminder, Clojure communities try to follow these guidelines for 
+      general conduct -- 
+      <a href="https://www.clojure.org/community/etiquette">Community Etiquette</a> -- 
+      and this Slack also has a specific
+      <a href="https://github.com/clojurians/community-development/blob/master/Code-of-Conduct.md">Code of Conduct</a>.
+    </p>
+    <p>
+      Once you join, why not say "Hi!" and tell folks a bit about yourself 
+      and why you're here, in the <strong>#introduce-yourself</strong> channel!
+    </p>
+    <p>
+      <button onclick="window.location.href='https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/'">
+        Join Clojurians Slack
+      </button>
     </p>
   </body>
 </html>

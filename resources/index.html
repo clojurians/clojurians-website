@@ -2,6 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Clojurians Slack</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <style>
       body {
         max-width: 600px;
@@ -23,8 +24,10 @@
         background: #5d83ca;
         font-size: clamp(1.5rem, 5vw, 2.2rem);
       }
-      button {
+      a.button {
+        display: inline-block;
         padding: 12px 18px;
+        text-decoration: none;
         color: #ffffff;
         background: #63b132;
         border: none;
@@ -33,10 +36,10 @@
         font-weight: 600;
         cursor: pointer;
       }
-      button:hover {
+      a.button:hover {
         background: #529d26;
       }
-      button:focus-visible {
+      a.button:focus-visible {
         outline: 3px solid #255e9b;
         outline-offset: 2px;
       }
@@ -45,7 +48,7 @@
           padding-left: 1.4em;
           width: 100%;
         }
-        button {
+        a.button {
           width: 100%;
         }
       }
@@ -54,8 +57,9 @@
   <body>
     <h1>Clojurians Slack</h1>
     <p>
-      Clojurians Slack is largest communication hub for the Clojure community.
-      <br>
+      Clojurians Slack is the largest communication hub for the Clojure community.
+    </p>
+    <p style="margin-bottom: 0; padding-bottom: 0;">
       Inside the Slack, you can
       <ul>
       <li>get help from experts in the community</li>
@@ -68,9 +72,9 @@
       We're fun, friendly, and helpful. Come join us!
     </p>
     <p>
-      <button onclick="window.location.href='https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/'">
+      <a class="button" href="https://join.slack.com/t/clojurians/shared_invite/zt-3wqiglayp-AeryGi81fgDJIwYdzRV_7Q">
         Join Clojurians Slack
-      </button>
+      </a>
     </p>
     <p>
       We want this to be a friendly and helpful space for everyone and the 
@@ -119,9 +123,9 @@
       and why you're here, in the <strong>#introduce-yourself</strong> channel!
     </p>
     <p>
-      <button onclick="window.location.href='https://clojurians.slack.com/join/shared_invite/zt-1h8l7y9g-9ZzjQ~q~0n2sXo5v3b8wA#/'">
+      <a class="button" href="https://join.slack.com/t/clojurians/shared_invite/zt-3wqiglayp-AeryGi81fgDJIwYdzRV_7Q">
         Join Clojurians Slack
-      </button>
+      </a>
     </p>
   </body>
 </html>

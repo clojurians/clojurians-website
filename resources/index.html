@@ -24,7 +24,7 @@
         background: #5d83ca;
         font-size: clamp(1.5rem, 5vw, 2.2rem);
       }
-      a.button {
+      .button {
         display: inline-block;
         padding: 12px 18px;
         text-decoration: none;
@@ -32,14 +32,17 @@
         background: #63b132;
         border: none;
         border-radius: 6px;
+        font: inherit;
         font-size: clamp(1rem, 2vw, 1.1rem);
         font-weight: 600;
         cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
       }
-      a.button:hover {
+      .button:hover {
         background: #529d26;
       }
-      a.button:focus-visible {
+      .button:focus-visible {
         outline: 3px solid #255e9b;
         outline-offset: 2px;
       }
@@ -48,7 +51,7 @@
           padding-left: 1.4em;
           width: 100%;
         }
-        a.button {
+        .button {
           width: 100%;
         }
       }
@@ -72,9 +75,9 @@
       We're fun, friendly, and helpful. Come join us!
     </p>
     <p>
-      <a class="button" href="https://join.slack.com/t/clojurians/shared_invite/zt-47492mxu9-QTT7ECeygv6AdIClrp~n9A">
+      <button class="button" type="button" data-join-slack>
         Join Clojurians Slack
-      </a>
+      </button>
     </p>
     <p>
       We want this to be a friendly and helpful space for everyone and the 
@@ -123,9 +126,20 @@
       and why you're here, in the <strong>#introduce-yourself</strong> channel!
     </p>
     <p>
-      <a class="button" href="https://join.slack.com/t/clojurians/shared_invite/zt-47492mxu9-QTT7ECeygv6AdIClrp~n9A">
+      <button class="button" type="button" data-join-slack>
         Join Clojurians Slack
-      </a>
+      </button>
     </p>
+    <script>
+      (function () {
+        const encoded = "__JOIN_URL_B64__";
+        const buttons = document.querySelectorAll("[data-join-slack]");
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].addEventListener("click", function () {
+            window.location.href = atob(encoded);
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
